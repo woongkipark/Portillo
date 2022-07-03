@@ -14,7 +14,7 @@ sap.ui.define(
         this.getView().setModel(oJson, 'myNode');
         oJson.loadData(
             // 'http://localhost:8921/files'
-            'https://port-8921-nodejs-annoyed-morning-lgx0920303481.codeanyapp.com/files'
+            'https://port-8921-nodejs-quaint-lizard-lgx0920328747.codeanyapp.com//files'
         ).then(
             function () {
                 debugger;
@@ -22,7 +22,7 @@ sap.ui.define(
         )
         // $.ajax(
         //   'http://localhost:8921/files',
-        //   //     'https://port-8921-nodejs-annoyed-morning-lgx0920303481.codeanyapp.com/files'
+        //   //     'https://port-8921-nodejs-quaint-lizard-lgx0920328747.codeanyapp.com/files'
         //   {
         //     method: "GET",
         //     success : function (...params) {
