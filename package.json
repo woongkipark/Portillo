@@ -4,9 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start" : "pm2 start main.js --watch",
-    "srvlist" : "pm2 list",
-    "kill" :  "pm2 kill"
+    "start": "pm2 start main.js --watch",
+    "srvlist": "pm2 list",
+    "kill": "pm2 kill"
   },
   "repository": {
     "type": "git",
