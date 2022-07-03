@@ -54,7 +54,7 @@ let app = http.createServer(function (request, response) {
             sDesc = sanitizehtml(fs.readFileSync(oFile.fileFullName, 'utf-8'))
             sDesc = myLib.templateManager.getTemplateFile(sDesc, oFile.id);
         } else {
-            sDesc = sanitizehtml(fs.readFileSync(oFile.fileFullName, 'utf-8'))
+            sDesc = fs.readFileSync(oFile.fileFullName, 'utf-8')
         }
 
         let sTemplate = myLib.templateManager.getTemplateBody(aTemplateContentList, oFile.id, sDesc);
