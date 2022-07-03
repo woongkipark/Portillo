@@ -1,0 +1,19 @@
+{
+  "name": "portillo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "git-deploy": "git subtree push --prefix ./frontend_sample/uimodule/dist main ghpage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woongkipark/Portillo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woongkipark/Portillo/issues"
+  },
+  "homepage": "https://github.com/woongkipark/Portillo#readme"
+}
