@@ -135,7 +135,19 @@ let app = http.createServer(function (request, response) {
 
     response.writeHead(200);
     response.end(sTemplate);
-
+    
+  } else if (sPath === '/files') {
+    let adirmyfilesList = fs.readdirSync('./myfiles');
+    if (adirmyfilesList) {
+        let sFilesList = JSON.stringify(adirmyfilesList);
+        response.writeHead(200, {
+            'Content-Type': 'text/html; charset=utf-8'
+        });
+        response.end(sFilesList);
+    } else {
+        response.writeHead(404);
+        response.end();
+    }
   } else {
     response.writeHead(404);
     response.end('not found');
