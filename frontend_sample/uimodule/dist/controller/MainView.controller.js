@@ -1,1 +1,1 @@
-sap.ui.define(["./BaseController"],function(n){"use strict";return n.extend("gitpg.myapp.controller.MainView",{onInit:function(){}})});
+sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel"],function(e,n){"use strict";return e.extend("gitpg.myapp.controller.MainView",{onInit:function(){let e=new n;this.getView().setModel(e,"myNode");e.loadData("https://port-8921-nodejs-annoyed-morning-lgx0920303481.codeanyapp.com/files").then(function(){debugger}.bind(this))}})});
