@@ -1,5 +1,4 @@
-<mvc:View 
-controllerName="gitpg.myapp.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core">
+<mvc:View controllerName="gitpg.myapp.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core">
 
   <Page id="page" title="{i18n>title}">
     <content>
@@ -11,6 +10,10 @@ controllerName="gitpg.myapp.controller.MainView" xmlns:mvc="sap.ui.core.mvc" dis
       <Title level="H1" titleStyle='H1'>
         <Link id='link2' text="Products Link2" target="_blank" press='.onPress' />
       </Title>
+
+      <List items = "{myData>/}"> <!-- 꺽쇠괄호 영역은 어그리게이션 바인딩이다.. 숙제2 -->
+        <ActionListItem id="Link" text="{myData>}" press=".onPress" />
+      </List>
 
       <HBox id="myExtend">
         <!-- 추가될 화면은 여기에 랜더링,, -->

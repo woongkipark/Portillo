@@ -14,27 +14,38 @@ sap.ui.define(
 
 
       onInit: function () {
-        let oJson = new JSONModel();
-        this.getView().setModel(oJson, 'myNode');
-        oJson.loadData(
-          'http://localhost:8921/files'
-          // 'https://port-8921-nodejs-quaint-lizard-lgx0920328747.codeanyapp.com/files'
-        ).then(
-          function () {
-            debugger;
-          }.bind(this)
-        )
-
-        // $.ajax(
-        //   'http://localhost:8921/files',
-        //   //     'https://port-8921-nodejs-quaint-lizard-lgx0920328747.codeanyapp.com/files'
-        //   {
-        //     method: "GET",
-        //     success : function (...params) {
-        //         debugger;
-        //     }
-        //   }
+        // let oJson = new JSONModel();
+        
+        // this.getView().setModel(oJson, 'myNode');
+        // oJson.loadData(
+        //   'http://localhost:8921/files'
+        //   // 'https://port-8921-nodejs-quaint-lizard-lgx0920328747.codeanyapp.com/files'
+        // ).then(
+        //   function () {
+        //     debugger;
+        //   }.bind(this)
         // )
+
+        // jquery
+        $.ajax(
+          'http://localhost:8921/files',
+          {
+            method: "GET",
+            success : function (...params) {
+              let Success = JSON.parse(params[0]);
+              
+              // myData
+              let oJson = new JSONModel(Success);
+
+              this.getView().setModel(oJson,'myData')
+
+              debugger;
+            }.bind(this),
+            error : function (...params) {
+              debugger;
+            }
+          }
+        )
       },
       onPress:function (oEvent) {
         let sIdRaiseEvent = oEvent.getSource().getId();
